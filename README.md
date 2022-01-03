@@ -1,4 +1,4 @@
-# sl-vue-tree
+# Narges - vue - tree
 
 Customizable draggable tree component for Vue.js
 
