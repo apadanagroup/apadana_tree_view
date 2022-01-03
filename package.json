@@ -1,6 +1,6 @@
 {
   "name": "narges-vue-tree",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Yohooooo",
   "browserslist": "> 0.25%, not dead",
   "main": "dist/sl-vue-tree.js",
