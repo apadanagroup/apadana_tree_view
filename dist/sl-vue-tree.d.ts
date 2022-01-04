@@ -8,6 +8,8 @@ export interface ISlTreeNodeModel<TDataType> {
     isDraggable?: boolean;
     isSelectable?: boolean;
     data?: TDataType;
+    expandedIcon?: 'fa-thin fa-square-minus';
+    notExpandedIcon?: 'fa-thin fa-square-plus'
 }
 export interface ISlTreeNode<TDataType> extends ISlTreeNodeModel<TDataType> {
     isVisible?: boolean;
@@ -50,6 +52,6 @@ export default class SlVueTree<TDataType> extends Vue {
     traverse(cb: (node: ISlTreeNode<TDataType>, nodeModel: ISlTreeNodeModel<TDataType>, siblings: ISlTreeNodeModel<TDataType>[]) => boolean | void, nodeModels?: ISlTreeNodeModel<TDataType>[], parentPath?: number[]): ISlTreeNode<TDataType>[] | boolean;
     getNodeEl(path: number[]): HTMLElement;
     select(path: number[], addToSelection?: boolean): ISlTreeNode<TDataType>;
-    remove(paths: number[][]): void
-    insert(cursorPosition: ICursorPosition<TDataType>, nodeModel:ISlTreeNodeModel<TDataType>): void
+    remove(paths: number[][]): void;
+    insert(cursorPosition: ICursorPosition<TDataType>, nodeModel:ISlTreeNodeModel<TDataType>): void;
 }

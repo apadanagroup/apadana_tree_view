@@ -2,6 +2,14 @@
 export default {
   name: 'sl-vue-tree',
   props: {
+    expandedIcon:{
+        type: String,
+        default: 'fa fa-file'
+    },
+    notExpandedIcon:{
+        type: String,
+        default: 'fa fa-folder'
+    },
     value: {
       type: Array,
       default: () => []

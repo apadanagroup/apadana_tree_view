@@ -8,6 +8,8 @@ export interface ISlTreeNodeModel<TDataType> {
     isDraggable?: boolean;
     isSelectable?: boolean;
     data?: TDataType;
+    expandedIcon?: 'fa-thin fa-square-minus';
+    notExpandedIcon?: 'fa-thin fa-square-plus'
 }
 export interface ISlTreeNode<TDataType> extends ISlTreeNodeModel<TDataType> {
     isVisible?: boolean;

@@ -10,26 +10,30 @@
 }
 
 .sl-vue-tree.sl-vue-tree-root {
-    border: 1px solid rgb(9, 22, 29);
-    background-color: rgb(9, 22, 29);
-    color: rgba(255, 255, 255, 0.5);
-    border-radius: 3px;
+    //border: 1px solid rgb(9, 22, 29);
+    //background-color: rgb(9, 22, 29);
+    //color: rgba(255, 255, 255, 0.5);
+    //border-radius: 6px;
 }
 
 .sl-vue-tree-root > .sl-vue-tree-nodes-list {
     overflow: hidden;
     position: relative;
     padding-bottom: 4px;
+    margin-right: 30px;
 }
 
 .sl-vue-tree-selected > .sl-vue-tree-node-item {
-    background-color: #13242d;
-    color: white;
+    //background-color: #35383f;
+    color: #009591;
+    border-radius: 5px;
+    width: 300px;
+    font-weight: bold;
 }
 
 .sl-vue-tree-node-item:hover,
 .sl-vue-tree-node-item.sl-vue-tree-cursor-hover {
-    color: white;
+    color: #00a8a3;
 }
 
 .sl-vue-tree-node-item {
@@ -41,6 +45,10 @@
     padding-right: 10px;
     line-height: 28px;
     border: 1px solid transparent;
+    cursor: pointer;
+    color:#000;
+    font-weight: 400;
+    font-size: 1.1rem;
 }
 
 
@@ -57,7 +65,12 @@
 .sl-vue-tree-toggle {
     display: inline-block;
     text-align: left;
-    width: 20px;
+
+
+    i{
+        font-weight: 300;
+        cursor: pointer;
+    }
 }
 
 .sl-vue-tree-sidebar {
@@ -78,3 +91,20 @@
     margin-left: 20px;
     padding: 5px 10px;
 }
+
+.contextmenu {
+    position: absolute;
+    background-color: white;
+    color: black;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.contextmenu > div {
+    padding: 10px;
+}
+
+.contextmenu > div:hover {
+    background-color: rgba(100, 100, 255, 0.5);
+}
+
