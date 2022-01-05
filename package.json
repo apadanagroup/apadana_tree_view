@@ -11,9 +11,15 @@
     "start": "npm run clear && webpack-cli --watch --progress --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "vue",
+    "tree",
+    "draggable",
+    "sortable"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apadanagroup/apadana_tree_view.git"
+    "url": "git+https://github.com/apadanagroup/apadana_vue_tree.git"
   },
   "author": "Apadana development team",
   "license": "MIT",
