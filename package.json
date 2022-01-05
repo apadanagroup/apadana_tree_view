@@ -1,5 +1,5 @@
 {
-  "name": "@apadana_dev/apadana_vue_tree",
+  "name": "apadana_vue_tree",
   "version": "1.0.0",
   "description": "Extension on sl-vue-tree",
   "browserslist": "> 0.25%, not dead",
