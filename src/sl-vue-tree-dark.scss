@@ -19,7 +19,7 @@
 .sl-vue-tree-root > .sl-vue-tree-nodes-list {
     overflow: hidden;
     position: relative;
-    padding-bottom: 4px;
+    padding-bottom: 83px;
     margin-right: 30px;
 }
 
@@ -28,7 +28,7 @@
     color: #009591;
     border-radius: 5px;
     width: 300px;
-    font-weight: bold;
+    //font-weight: bold;
 }
 
 .sl-vue-tree-node-item:hover,
@@ -93,18 +93,26 @@
 }
 
 .contextmenu {
+    right: 22px !important;
     position: absolute;
     background-color: white;
     color: black;
-    border-radius: 2px;
+    border-radius: 3px;
+    border: 1px solid grey;
     cursor: pointer;
+    top: 5px !important;
+    z-index: 1;
+    font-size: 0.95rem;
+    width: 80px;
 }
 
+
 .contextmenu > div {
-    padding: 10px;
+    padding: 3px 10px;
+    border-bottom: 1px solid #e7e7e7;
 }
 
 .contextmenu > div:hover {
-    background-color: rgba(100, 100, 255, 0.5);
+    background-color: #00a8a3;
 }
 

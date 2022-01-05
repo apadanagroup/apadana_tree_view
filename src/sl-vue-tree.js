@@ -10,6 +10,10 @@ export default {
         type: String,
         default: 'fa fa-folder'
     },
+    isExpandedParent: {
+        default : false,
+        type: Boolean
+    },
     value: {
       type: Array,
       default: () => []
@@ -74,6 +78,8 @@ export default {
   },
 
   mounted() {
+
+      // document.getElementById('sl-vue-tree-nodes-list').style.height = Number(document.getElementById("sl-vue-tree-nodes-list").clientHeight) + 132px;
     if (this.isRoot) {
       document.addEventListener('mouseup', this.onDocumentMouseupHandler);
     }
@@ -167,7 +173,7 @@ export default {
 
       if (!nodeModel) return null;
 
-      const isExpanded = nodeModel.isExpanded == void 0 ? true : !!nodeModel.isExpanded;
+      const isExpanded = nodeModel.isExpanded == void 0 ? false : !!nodeModel.isExpanded;
       const isDraggable = nodeModel.isDraggable == void 0 ? true : !!nodeModel.isDraggable;
       const isSelectable = nodeModel.isSelectable == void 0 ? true : !!nodeModel.isSelectable;
 
@@ -737,7 +743,6 @@ export default {
 
       this.emitInput(newNodes);
     },
-
     insertModels(cursorPosition, nodeModels, newNodes) {
       const destNode = cursorPosition.node;
       const destSiblings = this.getNodeSiblings(newNodes, destNode.path);
@@ -755,6 +760,18 @@ export default {
       }
     },
 
+    insertNode(destNode, nodeModels, newNodes) {
+      const destSiblings = this.getNodeSiblings(newNodes, destNode.path);
+      const destNodeModel = destSiblings[destNode.ind];
+        destNodeModel.isLeaf = false;
+        destNodeModel.children = destNodeModel.children || [];
+        nodeModels[0].isLeaf = true;
+        nodeModels[0].data.id_parent = destNodeModel.data.id;
+        destNodeModel.children.push(nodeModels[0]);
+        destNodeModel.isSelected = false;
+        destNodeModel.isExpanded = true;
+    },
+
     insert(cursorPosition, nodeModel) {
       const nodeModels = Array.isArray(nodeModel) ? nodeModel : [nodeModel];
       const newNodes = this.copy(this.currentValue);
@@ -763,6 +780,16 @@ export default {
 
       this.emitInput(newNodes);
     },
+
+    add(dest_node, nodeModel) {
+      const nodeModels = Array.isArray(nodeModel) ? nodeModel : [nodeModel];
+      const newNodes = this.copy(this.currentValue);
+
+      this.insertNode(dest_node, nodeModels, newNodes);
+
+      this.emitInput(newNodes);
+    },
+
 
     checkNodeIsParent(sourceNode, destNode) {
       const destPath = destNode.path;
