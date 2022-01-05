@@ -1,7 +1,7 @@
 {
-  "name": "narges-vue-tree",
-  "version": "1.0.2",
-  "description": "Yohooooo",
+  "name": "apadana_vue_tree",
+  "version": "1.0.0",
+  "description": "Extension on sl-vue-tree",
   "browserslist": "> 0.25%, not dead",
   "main": "dist/sl-vue-tree.js",
   "types": "dist/sl-vue-tree.d.ts",
@@ -17,7 +17,11 @@
     "draggable",
     "sortable"
   ],
-  "author": "Holiber",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apadanagroup/apadana_vue_tree.git"
+  },
+  "author": "Apadana development team",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.1.2",

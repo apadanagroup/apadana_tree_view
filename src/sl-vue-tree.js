@@ -772,24 +772,30 @@ export default {
         destNodeModel.isExpanded = true;
     },
 
+
     insert(cursorPosition, nodeModel) {
       const nodeModels = Array.isArray(nodeModel) ? nodeModel : [nodeModel];
       const newNodes = this.copy(this.currentValue);
-
       this.insertModels(cursorPosition, nodeModels, newNodes);
-
       this.emitInput(newNodes);
     },
 
     add(dest_node, nodeModel) {
       const nodeModels = Array.isArray(nodeModel) ? nodeModel : [nodeModel];
       const newNodes = this.copy(this.currentValue);
-
       this.insertNode(dest_node, nodeModels, newNodes);
-
       this.emitInput(newNodes);
+
     },
 
+      renameNodeTitle(node_to_edit,  title )
+      {
+          const newNodes = this.copy(this.currentValue);
+          const destSiblings = this.getNodeSiblings(newNodes, node_to_edit.path);
+          const destNodeModel = destSiblings[node_to_edit.ind];
+          destNodeModel.title = title;
+          this.emitInput(newNodes);
+      },
 
     checkNodeIsParent(sourceNode, destNode) {
       const destPath = destNode.path;
