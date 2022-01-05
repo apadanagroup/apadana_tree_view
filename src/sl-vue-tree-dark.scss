@@ -1,0 +1,118 @@
+.sl-vue-tree {
+    position: relative;
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+.sl-vue-tree.sl-vue-tree-root {
+    //border: 1px solid rgb(9, 22, 29);
+    //background-color: rgb(9, 22, 29);
+    //color: rgba(255, 255, 255, 0.5);
+    //border-radius: 6px;
+}
+
+.sl-vue-tree-root > .sl-vue-tree-nodes-list {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 83px;
+    margin-right: 30px;
+}
+
+.sl-vue-tree-selected > .sl-vue-tree-node-item {
+    //background-color: #35383f;
+    color: #009591;
+    border-radius: 5px;
+    width: 300px;
+    //font-weight: bold;
+}
+
+.sl-vue-tree-node-item:hover,
+.sl-vue-tree-node-item.sl-vue-tree-cursor-hover {
+    color: #00a8a3;
+}
+
+.sl-vue-tree-node-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 28px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    color:#000;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+
+.sl-vue-tree-node-item.sl-vue-tree-cursor-inside {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.sl-vue-tree-gap {
+    width: 25px;
+    min-height: 1px;
+
+}
+
+.sl-vue-tree-toggle {
+    display: inline-block;
+    text-align: left;
+
+
+    i{
+        font-weight: 300;
+        cursor: pointer;
+    }
+}
+
+.sl-vue-tree-sidebar {
+    margin-left: auto;
+}
+
+.sl-vue-tree-cursor {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: 1px;
+    width: 100%;
+}
+
+.sl-vue-tree-drag-info {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0.5;
+    margin-left: 20px;
+    padding: 5px 10px;
+}
+
+.contextmenu {
+    right: 22px !important;
+    position: absolute;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border: 1px solid grey;
+    cursor: pointer;
+    top: 5px !important;
+    z-index: 1;
+    font-size: 0.95rem;
+    width: 80px;
+}
+
+
+.contextmenu > div {
+    padding: 3px 10px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.contextmenu > div:hover {
+    background-color: #00a8a3;
+}
+
