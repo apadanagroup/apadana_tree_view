@@ -1,4 +1,4 @@
-# Narges - vue - tree
+# apadana - vue - tree
 
 Customizable draggable tree component for Vue.js
 
