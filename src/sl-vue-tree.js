@@ -788,12 +788,13 @@ export default {
 
     },
 
-      renameNodeTitle(node_to_edit,  title )
+      renameNodeTitle(node_to_edit,  title  , code)
       {
           const newNodes = this.copy(this.currentValue);
           const destSiblings = this.getNodeSiblings(newNodes, node_to_edit.path);
           const destNodeModel = destSiblings[node_to_edit.ind];
           destNodeModel.title = title;
+          destNodeModel.data.code = code;
           this.emitInput(newNodes);
       },
 
