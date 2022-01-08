@@ -1,6 +1,6 @@
 {
   "name": "apadana_vue_tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extension on sl-vue-tree",
   "browserslist": "> 0.25%, not dead",
   "main": "dist/sl-vue-tree.js",
